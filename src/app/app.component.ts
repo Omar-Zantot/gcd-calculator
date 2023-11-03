@@ -12,6 +12,7 @@ export class AppComponent {
   gcdResult!: number | null;
   err_msg: string = '';
   calculateGCD() {
+    if (this.number1 == null || this.number2 == null) this.errorLog();
     // Implement GCD calculation logic using Euclidean algorithm
     this.gcdResult = this.euclidean_gcd(this.number1!, this.number2!);
     if (this.gcdResult == null) this.errorLog();
