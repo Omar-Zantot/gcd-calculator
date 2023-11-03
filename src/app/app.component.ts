@@ -19,7 +19,10 @@ export class AppComponent {
   }
 
   euclidean_gcd(a: number, b: number) {
-    if (this.number1 == null || this.number2 == null) this.errorLog();
+    if (this.number1 == null || this.number2 == null) {
+      this.errorLog();
+      return null;
+    }
 
     console.log(this.number1);
     console.log(this.number2);
